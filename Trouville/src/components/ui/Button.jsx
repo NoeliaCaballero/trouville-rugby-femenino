@@ -17,7 +17,7 @@ const Button = ({
   href, // Para enlaces externos
   ...props 
 }) => {
-  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none inline-block text-center';
+  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none inline-block text-center cursor-pointer';
   
   const variants = {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-card hover:shadow-card-hover focus:ring-primary-500',
@@ -43,6 +43,7 @@ const Button = ({
       <Link
         to={to}
         className={classes}
+        style={{ textDecoration: 'none' }}
         {...props}
       >
         {children}
