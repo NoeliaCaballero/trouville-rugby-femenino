@@ -49,7 +49,7 @@ const Entrenamientos = () => {
                 <div className="mt-6">
                   <Button
                     variant="primary"
-                    onClick={() => window.open(googleMapsLink, '_blank')}
+                    href={googleMapsLink}
                   >
                     Ver en Google Maps
                   </Button>

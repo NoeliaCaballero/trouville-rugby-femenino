@@ -33,13 +33,15 @@ const MapaInteractivo = ({
 
             {/* Botones de navegación */}
             <div className="flex justify-center">
-              <button
-                onClick={handleOpenMaps}
+              <a
+                href={googleMapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <span>🗺️</span>
                 <span>Google Maps</span>
-              </button>
+              </a>
             </div>
 
             {/* Coordenadas */}

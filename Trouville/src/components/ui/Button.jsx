@@ -3,6 +3,7 @@
 // Principio OCP: extensible sin modificar código base
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Button = ({ 
   children, 
@@ -12,9 +13,11 @@ const Button = ({
   onClick,
   disabled = false,
   type = 'button',
+  to, // Nueva prop para enlaces
+  href, // Para enlaces externos
   ...props 
 }) => {
-  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
+  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none inline-block text-center';
   
   const variants = {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-card hover:shadow-card-hover focus:ring-primary-500',
@@ -34,6 +37,35 @@ const Button = ({
   
   const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
   
+  // Si tiene 'to', renderizar como Link interno
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        {...props}
+      >
+        {children}
+      </Link>
+    );
+  }
+  
+  // Si tiene 'href', renderizar como enlace externo
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
+  
+  // Si no tiene 'to' ni 'href', renderizar como botón normal
   return (
     <button
       type={type}

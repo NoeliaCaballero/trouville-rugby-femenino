@@ -29,7 +29,7 @@ const Home = () => {
             <Button
               variant="accent"
               size="large"
-              onClick={() => window.location.href = '/inscripciones'}
+              to="/inscripciones"
               className="text-lg sm:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 bg-primary-500 hover:bg-primary-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-glow-red border-2 border-white/20 hover:border-white/40 w-full sm:w-auto"
             >
               <span className="font-black tracking-wide">SUMATE AL EQUIPO</span>
@@ -136,7 +136,7 @@ const Home = () => {
               <Button
                 variant="accent"
                 size="large"
-                onClick={() => window.location.href = '/inscripciones'}
+                to="/inscripciones"
                 className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-white to-gray-100 text-primary-600 hover:from-gray-100 hover:to-white transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl font-bold w-full sm:w-auto"
               >
                 Inscribirse ahora
@@ -144,7 +144,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="large"
-                onClick={() => window.location.href = '/entrenamientos'}
+                to="/entrenamientos"
                 className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-lg font-bold w-full sm:w-auto"
               >
                 Ver entrenamientos

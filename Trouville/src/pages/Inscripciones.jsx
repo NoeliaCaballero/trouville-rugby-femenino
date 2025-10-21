@@ -169,7 +169,7 @@ const Inscripciones = () => {
                   <Button
                     variant="primary"
                     size="large"
-                    onClick={() => window.location.href = `mailto:${clubInfo.email}?subject=Inscripción Trouville Rugby`}
+                    href={`mailto:${clubInfo.email}?subject=Inscripción Trouville Rugby`}
                     className="w-full"
                   >
                     Enviar Email
@@ -191,7 +191,7 @@ const Inscripciones = () => {
                   <Button
                     variant="secondary"
                     size="large"
-                    onClick={() => window.location.href = '/entrenamientos'}
+                    to="/entrenamientos"
                     className="w-full"
                   >
                     Ver Entrenamientos
