@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Inscripciones from './pages/Inscripciones';
 import Entrenamientos from './pages/Entrenamientos';
 import Galeria from './pages/Galeria';
+import TestButtons from './pages/TestButtons';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/inscripciones" element={<Inscripciones />} />
         <Route path="/entrenamientos" element={<Entrenamientos />} />
         <Route path="/galeria" element={<Galeria />} />
+        <Route path="/test" element={<TestButtons />} />
       </Routes>
     </Layout>
   );
